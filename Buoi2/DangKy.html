@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1, td 
+        {
+            color: green;
+        }
+
+        table {
+            background-color: rgba(87, 229, 87, 0.549);
+        }
+    </style>
+</head>
+<body>
+    <table align="center" width="800px" cellpadding="5px" style="border-collapse: collapse;" border="1">
+        <caption><h1>Phiếu đăng ký tham gia chương trình khuyến mãi</h1></caption>
+        <tr>
+            <td>Họ và tên</td>
+            <td><input type="text"></td>
+        </tr>
+
+        <tr>
+            <td>Địa chỉ</td>
+            <td><input type="text"></td>
+        </tr>
+
+        <tr>
+            <td>Điện thoại</td>
+            <td><input type="text"></td>
+        </tr>
+
+        <tr>
+            <td>Phái</td>
+            <td>
+                <input type="radio"> <span>Nam</span>
+                <input type="radio"> <span>Nữ</span>
+            </td>
+        </tr>
+
+        <tr>
+            <td>Nghề nghiệp</td>
+            <td>
+                <select name="ngheNghiep" id="">
+                    <option value="GiaoVien">Giáo viên</option>
+                    <option value="SinhVien">Sinh viên</option>
+                    <option value="CongNhan">Công nhân</option>
+                </select>
+            </td>
+        </tr>
+
+        <tr>
+            <td>Chọn sản phẩm tham gia</td>
+            <td>
+                <input type="text" value="Kem đánh răng"> <br>
+                <input type="text" value="Bột giặt"> <br>
+                <input type="text" value="Dầu gội đầu"> <br>
+                <input type="text" value="Sữa tắm"> 
+            </td>
+        </tr>
+
+        <tr>
+            <td>Số người dự đoán tham gia</td>
+            <td><input type="text" value="250000"></td>
+        </tr>
+
+        <tr>
+            <td colspan="2"><center><button>Đồng ý</button></center></td>
+        </tr>
+    </table>
+</body>
+</html>

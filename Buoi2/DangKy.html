@@ -1,13 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        h1, td 
-        {
+        h1,
+        td {
             color: green;
         }
 
@@ -16,9 +17,12 @@
         }
     </style>
 </head>
+
 <body>
     <table align="center" width="800px" cellpadding="5px" style="border-collapse: collapse;" border="1">
-        <caption><h1>Phiếu đăng ký tham gia chương trình khuyến mãi</h1></caption>
+        <caption>
+            <h1>Phiếu đăng ký tham gia chương trình khuyến mãi</h1>
+        </caption>
         <tr>
             <td>Họ và tên</td>
             <td><input type="text"></td>
@@ -56,10 +60,12 @@
         <tr>
             <td>Chọn sản phẩm tham gia</td>
             <td>
-                <input type="text" value="Kem đánh răng"> <br>
-                <input type="text" value="Bột giặt"> <br>
-                <input type="text" value="Dầu gội đầu"> <br>
-                <input type="text" value="Sữa tắm"> 
+                <select name="Sanpham" size="4" multiple>
+                    <option value="Kem đánh răng">Kem đánh răng</option> <br>
+                    <option value="Bột giặt">Bột giặt</option> <br>
+                    <option value="Dầu gội đầu">Dầu gội đầu</option> <br>
+                    <option value="Sữa tắm">Sữa tắm</option>
+                </select>
             </td>
         </tr>
 
@@ -69,8 +75,11 @@
         </tr>
 
         <tr>
-            <td colspan="2"><center><button>Đồng ý</button></center></td>
+            <td colspan="2">
+                <center><button>Đồng ý</button></center>
+            </td>
         </tr>
     </table>
 </body>
+
 </html>

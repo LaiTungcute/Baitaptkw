@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Kết quả là</h2>
+    <h4 id="ketQua"></h4>
+
+    <script>
+        let ketQua = document.getElementById('ketQua');
+        let a = 4, b = 6, c = 2;
+        let delta = b*b - 4*a*c;
+        if(delta>0) {
+            ketQua.innerText = `x1 = ${(-b + Math.sqrt(delta)) / (2*a)}, x2 = ${(-b - Math.sqrt(delta)) / (2*a)}`
+        }
+        else if(delta===0) {
+            ketQua.innerText = `x = ${-b / (2*a)}`
+        }
+        else {
+            ketQua.innerText = 'Phương trình vô nghiệm'
+        }
+    </script>
+</body>
+</html>

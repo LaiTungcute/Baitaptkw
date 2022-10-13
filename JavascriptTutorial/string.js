@@ -11,11 +11,12 @@ console.log(a.concat(b));
 
 let fullName = "Lai Hoang Tung";
 //string.includes(a,b): Tìm kiếm xem phần tử đó có tồn tại hay ko? (a là chuỗi cần tìm kiếm, b là vị trí bắt đầu tìm kiếm)
-console.log(fullName.includes('Tung', 1));
+console.log(fullName.includes('Tung', 15));
 
 let subject = 'Javascript';
 //string.indexOf(a): Phần tử này xuất hiện lần đầu tiên ở đâu? (a là chuỗi cần xét)
-console.log(subject.indexOf(a));
+console.log(subject.indexOf('a'));
+console.log(subject.lastIndexOf('a'));
 
 let myFullName = 'Lai Hoang Tung';
 //string.slice(start, (end)): Lấy các phần tử từ start tới end (ko lấy end), nếu ko có end thì lấy từ start tới hết chuỗi
@@ -32,4 +33,22 @@ let world = "            Hello world       ";
 console.log(world.trim());
 
 //eval(string): Trả về kết quả 1 phép tính
-console.log(eval('1+2'));
+console.log(eval('a+2'));
+
+/*
+    templates string: `jhdaudhauduayfg ${a}`
+*/
+let string = `My name is ${b}`;
+console.log(string);
+let html = `<ul>
+    <li>Hello</li>
+</ul>`;
+console.log(html);     
+
+/*
+    split: Chia string thành các mảng
+*/
+let x = '1,2,3,4,5';
+let y = x.split(',');
+console.log(y);
+console.log(y.toString());

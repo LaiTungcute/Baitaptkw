@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table {
+            background-color: #ff99cc;
+        }
+    </style>
+</head>
+<body>
+    <table cellpadding="5px" align="center" border="1">
+        <tr>
+            <td colspan="2">Chương trình tra tuổi</td>
+        </tr>
+        <tr>
+            <td>Tuổi dương lịch</td>
+            <td><input id="tuoiDuong" type="text"></td>
+        </tr>
+        <tr>
+            <td>Tuổi âm lịch</td>
+            <td><input id="tuoiAm" type="text" value="" readonly="true"></td>
+        </tr>
+        <tr>
+            <td colspan="2" align="center">
+                <button id="reset" onclick="xoa()">Xóa</button>
+                <button id="traCuu" onclick="chay()">Tra cứu</button>
+            </td>
+        </tr>
+    </table>
+
+    <script>
+
+        //cách 1:
+        let tuoiDuong = document.getElementById('tuoiDuong');
+        let tuoiAm = document.getElementById('tuoiAm');
+        function tinhCan(a) {
+            let can = '';
+            let t =a%10;
+            console.log(a);
+            if(t===0) can+='Canh';
+            else if(t===1) can+='Tân';
+            else if (t===2) can+= 'Nhâm';
+            else if (t===3)  can+= 'Quí';
+            else if (t===4)  can+= 'Giáp';
+            else if (t===5)  can+= 'Ất';
+            else if (t===6)  can+= 'Bính';
+            else if (t===7)  can+= 'Đinh';
+            else if (t===8) can+= 'Mậu';
+            else if (t===9) can+= 'Kỷ';
+            
+            return can;
+        }
+
+        function tinhChi(a) {
+            let chi = '';
+            if(a%12===0) chi+='Thân';
+            else if(a%12===1) chi+='Dậu';
+            else if(a%12===2) chi+='Tuất';
+            else if(a%12===3) chi+='Hợi';
+            else if(a%12===4) chi+='Tý';
+            else if(a%12===5) chi+='Sửu';
+            else if(a%12===6) chi+='Dần';
+            else if(a%12===7) chi+='Mão';
+            else if(a%12===8) chi+='Thìn';
+            else if(a%12===9) chi+='Tỵ';
+            else if(a%12===10) chi+='Ngọ';
+            else if(a%12===11) chi+='Mùi';
+
+            return chi;
+        }
+
+        let text = '';
+
+        function chay() {
+            text = tinhCan(parseInt(tuoiDuong.value)) + ' ' + tinhChi(parseInt(tuoiDuong.value));
+            tuoiAm.value = text;
+        }
+
+        function xoa () {
+            tuoiAm.value = '';
+            tuoiDuong.value = '';
+        }
+
+        //cách 2:
+        // let tuoiDuong = document.getElementById('tuoiDuong')
+        // let tuoiAm = document.getElementById('tuoiAm');
+
+        // let can = ["Canh", "Tân", "Nhâm", "Quí", "Giáp", "Ất", "Binh", "Đinh", "Mậu", "Kỷ"];
+        
+        // let chi = ["Thân", "Dậu", "Tuất", "Hợi", "Tý", "Sửu", "Dần", "Mão", "Thìn", "Tỵ", "Ngọ", "Mùi"];
+        // let text = '';
+
+        // function chay() { 
+        //     let layTuoiDuong = tuoiDuong.value;
+        //     text = can[layTuoiDuong%10] + ' ' + chi[layTuoiDuong%12];
+        //     tuoiAm.value = text;
+        // }
+
+        // function xoa () {
+        //     tuoiAm.value = '';
+        //     tuoiDuong.value = '';
+        // }
+    </script>
+</body>
+</html>
